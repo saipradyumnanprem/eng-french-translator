@@ -20,10 +20,10 @@ def english_to_french(english_text):
     french_text = language_translator.translate(
     text=english_text,
     model_id='en-fr').get_result()
-    return french_text.get("translations")[0]
+    return french_text.get("translations")[0]['translation']
 
 def french_to_english(french_text):
     english_text = language_translator.translate(
     text=french_text,
     model_id='fr-en').get_result()
-    return english_text.get("translations")[0]
+    return english_text.get("translations")[0]['translation']
